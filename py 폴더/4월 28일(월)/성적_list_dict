@@ -1,0 +1,51 @@
+
+
+
+
+studentList = []
+
+for i in range (0,3):
+    student = {}
+    student["name"] = input("name?: ")
+    student["kor"] = int(input("Korean?: "))
+    student["eng"] = int(input("English?: "))
+    student["mat"] = int(input("Maths?: "))
+    studentList.append(student)
+
+for student in studentList:
+    student["total"] = student["kor"] + student["eng"] + student["mat"]
+    student["avg"] = student["total"]//3
+
+for student in studentList:
+    if student["avg"] > 90:
+        student["grade"] = "수"
+    elif student["avg"] > 80:
+        student["grade"] = "우"
+    elif student["avg"] > 70:
+        student["grade"] = "미"
+    elif student["avg"] > 60:
+        student["grade"] = "양"
+    else:
+        student["grade"] = "가"
+
+for student in studentList:
+    print(f"{student["name"]}, {student["kor"]}, {student["eng"]}, {student["mat"]}, {student["total"]}, {student["avg"]}, {student["grade"]}")
+
+# scoreList = []
+
+# for i in range(0,4):
+#     name = input("name: ")
+#     kor = int(input("korean: "))
+#     eng = int(input("english: "))
+#     mat = int(input("maths: "))
+
+#     score={}
+#     score["name"] = name
+#     score["kor"] = kor
+#     score["eng"] = eng
+#     score["mat"] = mat
+
+#     scoreList.append(score)
+
+    
+    
